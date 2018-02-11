@@ -20,11 +20,8 @@ export class ListComponent implements OnInit {
   }
 
   deleteEmployee(id: number): void {
-    // debugger;
-    // this.employees = this.employees.filter(e => e.id !== id);
     this.empService.deleteEmployee(id).subscribe();
     this.getEmployees();
-    var a = 1;
   }
 
   ngOnInit() {
