@@ -1,0 +1,17 @@
+<ul>
+  <table *ngFor="let employee of employees">
+    <!-- <span class="badge">{{employee.id}}</span> {{employee.name}} {{employee.surname}} {{employee.exp}} {{employee.age}} {{employee.address}} -->
+    <tbody>
+      <tr>
+        <td #id>{{employee.id}}</td>
+        <td>{{employee.name}}</td>
+        <td>{{employee.surname}}</td>
+        <td>{{employee.exp}}</td>
+        <td>{{employee.age}}</td>
+        <td>{{employee.address}}</td>
+        <!-- <td><button routerLink="/edit/{{employee.id}}">Edit</button></td> -->
+        <!-- <td><button (click)="deleteEmployee(employee.id)">Delete</button></td> -->
+      </tr>
+    </tbody>
+  </table>
+</ul>
