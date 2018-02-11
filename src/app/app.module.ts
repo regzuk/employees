@@ -11,12 +11,16 @@ import { EmployeeService }  from './employee.service';
 import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { DetailComponent } from './detail/detail.component';
+import { NewComponent } from './new/new.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListComponent
+    ListComponent,
+    DetailComponent,
+    NewComponent
   ],
   imports: [
     BrowserModule,

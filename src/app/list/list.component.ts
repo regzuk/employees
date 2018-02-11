@@ -4,6 +4,8 @@ import { Employee } from '../employee';
 
 import { EmployeeService } from '../employee.service'
 
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -13,7 +15,8 @@ export class ListComponent implements OnInit {
 
   employees: Employee[];
 
-  constructor(private empService: EmployeeService) { }
+  constructor(private empService: EmployeeService,
+    private router: Router) { }
 
   getEmployees(): void {
     this.empService.getEmployees().subscribe(employees => this.employees = employees);
@@ -28,4 +31,7 @@ export class ListComponent implements OnInit {
     this.getEmployees();
   }
 
+  goAdd(): void {
+    this.router.navigateByUrl("/new");
+  }
 }
