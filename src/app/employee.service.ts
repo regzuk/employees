@@ -21,6 +21,12 @@ export class EmployeeService {
       return this.http.get<Employee[]>(this.url);
   };
 
+  deleteEmployee (id: number): Observable<{}> {
+    const deleteUrl = `${this.url}/${id}`;
+    // debugger;
+    return this.http.delete(deleteUrl, httpOptions);
+  };
+
   constructor(private http: HttpClient) { }
 
 }

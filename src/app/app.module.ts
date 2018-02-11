@@ -10,6 +10,7 @@ import { EmployeeService }  from './employee.service';
 
 import { AppComponent } from './app.component';
 import { ListComponent } from './list/list.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ListComponent } from './list/list.component';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+    AppRoutingModule
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]
