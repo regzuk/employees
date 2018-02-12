@@ -1,8 +1,20 @@
-<ul>
-  <button (click)="goAdd()">New</button>
-  <table *ngFor="let employee of employees">
-    <!-- <span class="badge">{{employee.id}}</span> {{employee.name}} {{employee.surname}} {{employee.exp}} {{employee.age}} {{employee.address}} -->
-    <tbody>
+<div class="container">
+  <h2 class="text-center">List of Employees</h2>
+  <div class="col-md-4">
+    <button type="button" class="btn btn-block" (click)="goAdd()">New</button>
+  </div>
+  <table  class="table table-hover">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Surname</td>
+            <td>Experience</td>
+            <td>Age</td>
+            <td>Address</td>
+          </tr>
+    </thead>
+    <tbody *ngFor="let employee of employees">
       <tr>
         <td #id>{{employee.id}}</td>
         <td>{{employee.name}}</td>
@@ -10,9 +22,9 @@
         <td>{{employee.exp}}</td>
         <td>{{employee.age}}</td>
         <td>{{employee.address}}</td>
-        <td><button routerLink="/edit/{{employee.id}}">Edit</button></td>
-        <td><button (click)="deleteEmployee(employee.id)">Delete</button></td>
+        <td><button type="button" class="btn" routerLink="/edit/{{employee.id}}">Edit</button></td>
+        <td><button type="button" class="btn" (click)="deleteEmployee(employee.id)">Delete</button></td>
       </tr>
     </tbody>
   </table>
-</ul>
+</div>
