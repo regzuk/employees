@@ -20,11 +20,18 @@ export class EmployeeService {
   getEmployees (): Observable<Employee[]> {
       return this.http.get<Employee[]>(this.url);
   };
+  getEmployee (id: number): Observable<Employee> {
+    const getUrl = `${this.url}/${id}`;
+    return this.http.get<Employee>(getUrl);
+};
 
   addEmployee (emp: Employee): Observable<Employee> {
     return this.http.post<Employee>(this.url, emp, httpOptions);
   }
 
+  updateEmployee(emp: Employee): Observable<any> {
+    return this.http.put<Employee>(this.url, emp, httpOptions);
+  }
 
   deleteEmployee (id: number): Observable<{}> {
     const deleteUrl = `${this.url}/${id}`;

@@ -13,6 +13,7 @@ import { ListComponent } from './list/list.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { DetailComponent } from './detail/detail.component';
 import { NewComponent } from './new/new.component';
+import { EditComponent } from './edit/edit.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { NewComponent } from './new/new.component';
     AppComponent,
     ListComponent,
     DetailComponent,
-    NewComponent
+    NewComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,7 @@
 <p>
-  name: <input type="text" (input) = "name = $event.target.value">
-  surname: <input type="text" (input) = "surname = $event.target.value">
-  age: <input type="number" (input) = "age = $event.target.value">
-  exp: <input type="number" (input) = "exp = $event.target.value">
-  address: <input type="text" (input) = "addr = $event.target.value">
-</p>
-<p>
-  321{{id}}123
-  {{surname}}
+  name: <input [value]="name" type="text" (input) = "name = $event.target.value">
+  surname: <input [value]="surname" type="text" (input) = "surname = $event.target.value">
+  age: <input [value]="age" type="number" (input) = "age = $event.target.value">
+  exp: <input [value]="exp" type="number" (input) = "exp = $event.target.value">
+  address: <input [value]="addr" type="text" (input) = "addr = $event.target.value">
 </p>

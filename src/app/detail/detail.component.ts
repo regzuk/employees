@@ -9,16 +9,19 @@ import { Employee } from '../employee';
 })
 export class DetailComponent implements OnInit {
 
-  name: string;
-  surname: string;
-  age: number;
-  exp: number;
-  addr: string;
+  @Input() name: string;
+  @Input() surname: string;
+  @Input() age: number;
+  @Input() exp: number;
+  @Input() addr: string;
   @Input() id: number;
 
   constructor() { }
 
   ngOnInit() {
+    if (!this.name) this.name = "";
+    if (!this.surname) this.surname = "";
+    if (!this.addr) this.addr = "";
   }
 
   getData (): Employee {

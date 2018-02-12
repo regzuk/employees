@@ -26,8 +26,8 @@ export class NewComponent implements OnInit {
   
   add(): void {
     let emp = this.detail.getData();
-    this.empService.addEmployee(emp).subscribe();
-    this.goBack();
+    this.empService.addEmployee(emp).subscribe(() => this.goBack());
+    
   }
 
   goBack(): void {
